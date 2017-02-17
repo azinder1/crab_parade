@@ -13,16 +13,19 @@
    <div class="nav-wrapper">
      <a href="/" class="brand-logo">Crab Parade</a>
      <ul id="nav-mobile" class="right hide-on-med-and-down">
-       <li><a href="/">Home</a></li>
+       <li><%= link_to 'Home', root_path%></li>
        <% if current_user %>
-    
+
        <li> <%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
        <% else %>
        <li><%= link_to 'Login', new_user_session_path %></li>
+       <%= yield(:navbar) %>
        <% end %>
      </ul>
    </div>
  </nav>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

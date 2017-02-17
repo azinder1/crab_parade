@@ -1,1 +1,7 @@
-<h2>hello world</h2>
+
+  <%= content_for(:navbar) do %>
+  <li><%= link_to "Products", products_path %></li>
+  <% end %>
+
+
+<h2>Welcome to Crab Parade</h2>
