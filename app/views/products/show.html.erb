@@ -6,3 +6,16 @@
 <h3><%= @product.name %></h3>
 <li><%= @product.description %></li>
 <li><%= @product.price %></li>
+
+<h3>Reviews</h3>
+<% if @product.reviews.any? %>
+  <% @product.reviews.each do |review| %>
+    <p><strong><%= review.rating %></strong></p>
+    <p>By <strong><%= review.user.email %></strong></p>
+    <p><%= review.content %></p>
+  <% end %>
+  <% else  %>
+  <h3>There are no reviews written for this product yet!</h3>
+<% end %>
+
+<%= render 'reviews/form' %>
