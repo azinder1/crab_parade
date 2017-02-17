@@ -8,7 +8,7 @@ class ReviewsController < ApplicationController
     @product =Product.find(params[:product_id])
     @review = @product.reviews.new(review_params)
     @review[:user_id] = @user.id
-    binding.pry
+
     if @review.save
       redirect_to product_path(@product)
     else

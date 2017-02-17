@@ -1,7 +1,9 @@
+
+
 <%= form_for [@product, @review] do |f| %>
-<%= f.label :content %>
-<%= f.text_field :content %>
-<%= f.label :rating %>
-<%= f.text_field :rating %>
-<%= submit_tag 'Add Review' %>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+  <%= f.label :rating %>
+  <%= f.text_field :rating %>
+  <%= submit_tag 'Add Review' %>
 <% end %>

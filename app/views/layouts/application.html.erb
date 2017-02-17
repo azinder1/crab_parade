@@ -11,12 +11,15 @@
   <body>
     <nav>
    <div class="nav-wrapper">
-     <a href="/" class="brand-logo">Crab Parade</a>
+     <%= link_to 'Crab Parade', root_path%>
      <ul id="nav-mobile" class="right hide-on-med-and-down">
-       <li><%= link_to 'Home', root_path%></li>
        <% if current_user %>
        <%= yield(:navbar) %>
-       <li> <%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+       <li><%= link_to "Edit Profile", edit_user_path(current_user) %></li>
+          <%= yield(:adminnavbar) %>
+          <li> <%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+          <% if current_user.admin == true %>
+          <% end %>
        <% else %>
        <li><%= link_to 'Login', new_user_session_path %></li>
        <% end %>
