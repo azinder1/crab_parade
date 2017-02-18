@@ -3,10 +3,16 @@
 <% end %>
 <h3>Products</h3>
 <% if @products.any? %>
+<div class="row">
   <% @products.each do |product|%>
-    <%= image_tag product.product_picture, :class => "thumbnail" %>
-    <li><%= link_to product.name, product_path(product) %></li>
-  <% end %>
+    <div class="col s12 m4 product-index">
+      <div class="card-content black-text">
+      <%= image_tag product.product_picture, :class => "thumbnail" %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    </div>
+  </div>
+<% end %>
+</div>
   <% else %>
     <h4>There are currently no products</h4>
 <% end %>
