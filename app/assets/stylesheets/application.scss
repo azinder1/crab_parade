@@ -6,3 +6,15 @@ $secondary-color: color("yellow", "base") !default;
 .title-page {
   text-align: center;
 }
+
+.thumbnail {
+  height: 200px;
+  width: auto;
+}
+
+.show-photo{
+  margin-top: 40px;
+  text-align: center;
+  height: 300px;
+  width: auto;
+}

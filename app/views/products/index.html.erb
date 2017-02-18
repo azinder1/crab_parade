@@ -4,6 +4,7 @@
 <h3>Products</h3>
 <% if @products.any? %>
   <% @products.each do |product|%>
+    <%= image_tag product.product_picture, :class => "thumbnail" %>
     <li><%= link_to product.name, product_path(product) %></li>
   <% end %>
   <% else %>

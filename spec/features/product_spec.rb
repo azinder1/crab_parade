@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 
-describe "creates product by specific user" do
+describe "creates product by admin user" do
   before() do
-    user = create(:user)
+    user = create(:user, :admin => true)
     visit new_user_session_path
     fill_in 'Email', :with => 'email@email.com'
     fill_in 'Password', :with => '123456'
