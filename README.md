@@ -1,24 +1,38 @@
-# README
+# _Crab Parade Online Shop_
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### _Rails App for a fictional online shop_
 
-Things you may want to cover:
+#### By _**Adam Zinder**_
 
-* Ruby version
+## Description
 
-* System dependencies
+_A basic Rails RESTless routing app that includes admin and user authorization features_
 
-* Configuration
+## Setup/Installation Requirements
 
-* Database creation
+* _$ git clone https://github.com/azinder1/crab_parade_
+* _$ bundle install_
+* _$ brew install imagemagick_
+* _$ rails db:create_
+* _$ rails db:migrate_
+* _$ rails db:test:prepare_
+* _$ rails s_
+* _Use localhost:3000 in browser of choice_
 
-* Database initialization
+## Known Bugs
 
-* How to run the test suite
+_None that are known_
 
-* Services (job queues, cache servers, search engines, etc.)
+## Support and contact details
 
-* Deployment instructions
+_https://github.com/azinder1_
 
-* ...
+## Technologies Used
+
+_Rails, Sass, Materialize_
+
+### License
+
+*MIT*
+
+Copyright (c) 2016 **_Adam Zinder_**
