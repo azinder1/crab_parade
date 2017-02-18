@@ -8,7 +8,7 @@
     <div class="col s12 m4 product-index">
       <div class="card-content black-text">
       <%= image_tag product.product_picture, :class => "thumbnail" %>
-      <li><%= link_to product.name, product_path(product) %></li>
+      <p class ="center"> <%= link_to product.name, product_path(product) %></p>
     </div>
   </div>
 <% end %>
