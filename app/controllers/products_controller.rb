@@ -8,6 +8,12 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @user = current_user
     @review = Review.new
+    @review_rating = 0
+    @product.reviews.each do |r|
+      rating = r.rating.to_int
+      @review_rating += rating
+    end
+    @review_average = @review_rating / @product.reviews.length
   end
 
   def new

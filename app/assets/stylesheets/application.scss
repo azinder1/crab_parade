@@ -18,3 +18,13 @@ $secondary-color: color("yellow", "base") !default;
   height: 300px;
   width: auto;
 }
+
+select {
+  display: block !important;
+  width: 100px;
+}
+
+input {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
